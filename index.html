@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<title>ByeLui: track personal and family spending separately</title>
-<meta name="description" content="Two books, Personal and Family, so household bills never get mixed into your own spending. No account, nothing uploaded.">
+<title>ByeLui — Free Expense Tracker for Personal &amp; Family Spending | Android Beta</title>
+<meta name="description" content="Track personal and family expenses separately with ByeLui. A simple, free Android expense tracker with budgets, recurring expenses, English and Chinese. Join the closed test.">
 <meta property="og:title" content="ByeLui: personal and family expense tracker">
-<meta property="og:description" content="Keep family and personal spending apart. Your records stay on your phone.">
+<meta property="og:description" content="ByeLui helps you record daily expenses quickly, keep personal and family spending separate, and stay on top of budgets. Android closed testing is open for feedback.">
 <style>
   :root {
     --bg: #fffcf7;
@@ -56,7 +56,17 @@
   .hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 3.5rem; align-items: center; padding-top: 3.5rem; padding-bottom: 4rem; }
   .hero h1 { font-size: clamp(2.1rem, 5vw, 3.3rem); letter-spacing: -.02em; max-width: 16em; }
   .hero .lede { font-size: 1.2rem; color: var(--muted); max-width: 32em; margin: 1.25rem 0 1.75rem; }
-  .actions { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; }
+  .actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .eyebrow { color: var(--receipt-gain); font-size: .84rem; letter-spacing: .11em; text-transform: uppercase; font-weight: 800; margin-bottom: .7rem; }
+  .pills { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.4rem; }
+  .pills span { border:1px solid var(--rule); border-radius:999px; padding:.32rem .75rem; font-size:.83rem; font-weight:600; }
+  .tester-panel { border:1px solid var(--rule); border-radius:20px; background:var(--receipt-bg); color:var(--receipt-text); padding:2rem; max-width:48rem; }
+  .tester-panel p { max-width:40rem; }
+  .tester-panel .fine { font-size:.88rem; opacity:.76; margin-top:1rem; }
+  .steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; margin:1.6rem 0; }
+  .steps strong { display:block; font-size:1.1rem; }
+  .steps p { color:var(--muted); font-size:.95rem; margin:.3rem 0 0; }
+  @media(max-width:760px) { .steps { grid-template-columns:1fr; gap:.8rem; } }
   .btn { display: inline-block; background: var(--accent); color: var(--on-accent); font-weight: 600; text-decoration: none; padding: .8rem 1.35rem; border-radius: 10px; }
   .btn:hover { filter: brightness(.95); }
 
@@ -110,7 +120,7 @@
     <a class="brand" href="/">ByeLui</a>
     <nav aria-label="Main">
       <a href="#features">Features</a>
-      <a href="#screens">Screens</a>
+      <a href="#testers">Become a tester</a>
       <a href="policy.html">Privacy</a>
     </nav>
   </div>
@@ -119,12 +129,15 @@
 <main>
   <div class="wrap hero">
     <div>
-      <h1>Keep your family spending and your own spending apart</h1>
-      <p class="lede">ByeLui gives you two books, Personal and Family, so household bills never get mixed into your own spending. Log entries, set budgets and see where the money goes. There is no account to create and nothing leaves your phone.</p>
+      <p class="eyebrow">Free Android app · Closed testing</p>
+      <h1>Spend less time tracking. Know where your money goes.</h1>
+      <p class="lede">ByeLui makes daily expense tracking simple. Record spending in seconds, keep <strong>Personal</strong> and <strong>Family</strong> expenses separate, and see what your household really spends. No subscription. No bank connection required.</p>
       <div class="actions">
-        <!-- This link works once the app is live on Google Play. -->
-        <a class="btn" href="https://play.google.com/store/apps/details?id=com.cloudfullstack.byelui">Get it on Google Play</a>
-        <a href="#features">See what it does</a>
+        <a class="btn" href="#testers">Join Android closed testing</a>
+        <a href="#features">Explore the features</a>
+      </div>
+      <div class="pills" aria-label="Highlights">
+        <span>Free · Small banner ads</span><span>Personal + Family</span><span>English + 中文</span><span>SGD / MYR / USD</span>
       </div>
     </div>
 
@@ -142,38 +155,20 @@
     </div>
   </div>
 
-  <section id="screens">
+  <section id="testers">
     <div class="wrap">
-      <h2>See it in use</h2>
-      <p class="sub">A few screens from the app.</p>
-
-      <!--
-        SCREENSHOTS: save your phone screenshots into the images/ folder using
-        the exact file names shown below (PNG, ideally 1080x2340 or similar).
-        Each placeholder swaps to your image automatically, no HTML edits needed.
-        Change a caption or add another screen by copying one <figure> block.
-      -->
-      <div class="shots">
-        <figure class="shot">
-          <div class="frame" data-file="images/home.png"><img src="images/home.png" alt="ByeLui home screen with the monthly summary and recent transactions" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <figcaption>Home and recent entries</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame" data-file="images/add-transaction.png"><img src="images/add-transaction.png" alt="Adding a transaction and choosing the card it was paid with" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <figcaption>Add a transaction</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame" data-file="images/analytics.png"><img src="images/analytics.png" alt="Analytics screen with spending by category and income versus expense" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <figcaption>Analytics</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame" data-file="images/budget.png"><img src="images/budget.png" alt="Budget screen showing spending against each category limit" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <figcaption>Monthly budgets</figcaption>
-        </figure>
-        <figure class="shot">
-          <div class="frame" data-file="images/all-transactions.png"><img src="images/all-transactions.png" alt="All transactions list with search and filters" loading="lazy" decoding="async" onerror="this.remove()"></div>
-          <figcaption>Search and filter everything</figcaption>
-        </figure>
+      <p class="eyebrow">Help shape ByeLui</p>
+      <h2>Android users wanted for our closed test</h2>
+      <p class="sub">We're preparing ByeLui for Google Play. If you use Android and would like a straightforward expense tracker, we'd love your honest feedback.</p>
+      <div class="tester-panel">
+        <h3>Try ByeLui before public release</h3>
+        <div class="steps">
+          <div><strong>1. Get in touch</strong><p>Send us an email saying you want to join the ByeLui Android test.</p></div>
+          <div><strong>2. Join through Google Play</strong><p>We'll send instructions for joining the closed test if places are available.</p></div>
+          <div><strong>3. Try everyday expenses</strong><p>Log a few purchases, explore budgets and bills, and tell us what could be easier.</p></div>
+        </div>
+        <a class="btn" href="mailto:nnywwynn88@gmail.com?subject=ByeLui%20Android%20Closed%20Testing&amp;body=Hi%2C%20I%27d%20like%20to%20join%20the%20ByeLui%20Android%20closed%20test.">Request an Android test invitation</a>
+        <p class="fine">Android only for now · Invitation subject to closed-test availability · No subscription required</p>
       </div>
     </div>
   </section>
@@ -181,23 +176,23 @@
   <section id="features">
     <div class="wrap">
       <h2>What it does</h2>
-      <p class="sub">Built around one idea: your own money and your household’s money should not sit in the same list.</p>
+      <p class="sub">A simple daily spending habit, designed around real-life personal and household expenses.</p>
 
       <div class="features">
         <div class="feature lead">
-          <h3>Personal and Family, kept apart</h3>
-          <p>Every entry goes into either your Personal book or your Family book. Flip the switch to see only your own spending, or only the household’s. Budgets, analytics and exports follow the same switch, so a family grocery run never eats into your personal budget.</p>
+          <h3>Personal and Family, without the confusion</h3>
+          <p>Choose Personal or Family when recording a transaction. Switch views to understand each one separately—or see everything together. No shared accounts or bank connections are needed.</p>
         </div>
         <div class="feature">
-          <h3>Monthly budgets</h3>
+          <h3>Set a budget, stay aware</h3>
           <p>Set limits separately for Personal and Family, and see how much is left to spend this month, with a clear warning when you go over.</p>
         </div>
         <div class="feature">
-          <h3>Analytics</h3>
+          <h3>Understand your spending</h3>
           <p>Spending by category, income against expenses, and how this month compares with last month or last year.</p>
         </div>
         <div class="feature">
-          <h3>Know which card you used</h3>
+          <h3>Cash, cards and payment sources</h3>
           <p>Label entries with your cards or cash and see what each one has spent, so you can check a minimum-spend target at a glance.</p>
         </div>
         <div class="feature">
@@ -205,18 +200,18 @@
           <p>Attach a photo of the receipt, add tags, and tap a tag to see every entry that carries it.</p>
         </div>
         <div class="feature">
-          <h3>Export and backup</h3>
-          <p>Export to Excel, CSV or PDF with income and expense totals and a Personal or Family column, or save a backup file you control.</p>
+          <h3>Your records, your backup</h3>
+          <p>Export records to Excel, CSV or PDF. Create a portable ZIP backup containing your transaction data and saved receipt photos, ready to restore on another device.</p>
         </div>
       </div>
-      <p class="also">Also included: recurring bills, entries in any currency with totals in your own, and a PIN or fingerprint lock.</p>
+      <p class="also">Also included: recurring expenses, credit-card payment reminders, quick recent-category suggestions, English and Chinese, SGD/MYR/USD entry, and optional PIN or biometric app lock.</p>
     </div>
   </section>
 
   <section class="privacy">
     <div class="wrap">
-      <h2>Your data stays on your phone</h2>
-      <p>Entries, receipt photos and your PIN are stored on the device. ByeLui has no accounts and no servers of its own. The only third party is Google AdMob, which shows the banner ads.</p>
+      <h2>Private by design, with no required account</h2>
+      <p>Your expense entries and receipt photos are stored locally on your phone. You control when to share exports or backups. ByeLui uses a small Google AdMob banner, and the advertising SDK may process device and usage information as described in the privacy policy.</p>
       <p><a href="policy.html">Read the privacy policy</a></p>
     </div>
   </section>
@@ -224,7 +219,7 @@
 
 <footer>
   <div class="wrap">
-    <span>&copy; 2026 REPLACE: your name or company</span>
+    <span>&copy; 2026 ByeLui · Built for everyday expense tracking</span>
     <span class="links">
       <a href="policy.html">Privacy policy</a>
       <a href="mailto:nnywwynn88@gmail.com">nnywwynn88@gmail.com</a>
